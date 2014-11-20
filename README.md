@@ -21,13 +21,13 @@ docker pull zokeber/mongodb
 
 **Another way: build from Github**
 
-To create the image zokeber/centos, clone this repository and execute the following command on the docker-mongodb folder:
+To create the image zokeber/mongodb, clone this repository and execute the following command on the docker-mongodb folder:
 
 `docker build -t zokeber/mongodb:latest .`
 
 Another alternatively, you can build an image directly from Github:
 
-`docker build -t="zokeber/centos:latest" github.com/zokeber/docker-mongodb`
+`docker build -t="zokeber/mongodb:latest" github.com/zokeber/docker-mongodb`
 
 
 ### Create and running a container
