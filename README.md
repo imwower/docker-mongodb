@@ -4,7 +4,7 @@ This repository contains a Dockerfile to build a Docker Image for CentOS 7 with 
 
 ## Base Docker Image
 
-* [zokber/centos](https://registry.hub.docker.com/u/zokeber/centos/)
+* [zokeber/centos](https://registry.hub.docker.com/u/zokeber/centos/)
 
 ## Usage
 
