@@ -3,7 +3,7 @@
 #
 
 # Build:
-# docker build -t zokeber/mongodb .
+# docker build -t zokeber/mongodb:latest .
 #
 # Create:
 # docker create -it -p 27017:27017 --name mongodb zokeber/mongodb
@@ -29,9 +29,13 @@ RUN echo -e "[mongodb]\nname=MongoDB Repository\nbaseurl=http://downloads-distro
 RUN yum update
 RUN yum install mongo-10gen mongo-10gen-server -y
 RUN yum clean all
+RUN chown -R mongod:mongod /var/lib/mongo
 
 # Copy config mongodb
 ADD etc/ /etc/
+
+# User
+USER mongod
 
 # Mountable directories
 VOLUME ["/var/lib/mongo"]
@@ -43,7 +47,7 @@ ENV HOME /var/lib/mongo
 WORKDIR /var/lib/mongo
 
 ENTRYPOINT ["/bin/mongod"]
-CMD ["-f", "/etc/mongodb.conf"]
+CMD ["-f", "/etc/mongod.conf"]
 
 # Expose ports.
 EXPOSE 27017
