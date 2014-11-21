@@ -1,6 +1,6 @@
 # MongoDB Dockerfile in CentOS 7 image
 
-This repository contains a Dockerfile to build a Docker Image for CentOS 7 with steroids.
+This repository contains a Dockerfile to build a Docker Image for MongoDB in CentOS 7.
 
 ## Base Docker Image
 
@@ -16,7 +16,7 @@ This repository contains a Dockerfile to build a Docker Image for CentOS 7 with 
 2. You can download automated build from public Docker Hub Registry:
 
 ```
-docker pull zokeber/mongodb
+docker pull zokeber/mongodb:latest
 ```
 
 **Another way: build from Github**
