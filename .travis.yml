@@ -2,4 +2,4 @@ install:
 - curl -sLo - http://j.mp/install-travis-docker | sh -xe
 
 script:
-- ./run "docker build -t zokeber/mongodb:latest ."
+- ./run "docker build -t zokeber/mongodb ."
