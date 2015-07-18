@@ -25,9 +25,9 @@ FROM zokeber/centos
 MAINTAINER Daniel Lopez Monagas <zokeber@gmail.com>
 
 # Install MongoDB
-RUN echo -e "[mongodb]\nname=MongoDB Repository\nbaseurl=http://downloads-distro.mongodb.org/repo/redhat/os/`uname -m`/\ngpgcheck=0\nenabled=1" > /etc/yum.repos.d/mongodb.repo
+RUN echo -e "[mongodb]\nname=MongoDB Repository\nbaseurl=https://repo.mongodb.org/yum/redhat/7/mongodb-org/3.0/`uname -m`/\ngpgcheck=0\nenabled=1" > /etc/yum.repos.d/mongodb.repo
 RUN yum update -y
-RUN yum install mongo-10gen mongo-10gen-server -y
+RUN yum install -y mongodb-org
 RUN yum clean all
 RUN chown -R mongod:mongod /var/lib/mongo
 
