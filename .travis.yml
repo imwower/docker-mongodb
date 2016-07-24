@@ -1,7 +1,11 @@
 sudo: true
 
+env:
+  global:
+    - DOCKER_VERSION=1.9.1  # Install Docker version 1.9.1
+
 services:
-  - docker=1.9.1
+  - docker
 
 install:
   - curl -sLo - http://j.mp/install-travis-docker | sh -xe
