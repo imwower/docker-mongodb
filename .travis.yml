@@ -1,4 +1,4 @@
-sudo: true
+sudo: required
 
 env:
   global:
@@ -7,8 +7,7 @@ env:
 services:
   - docker
 
-install:
-  - curl -sLo - http://j.mp/install-travis-docker | sh -xe
-
 script:
-  - ./run "docker build -t zokeber/mongodb ."
+  - docker build -t zokeber/mongodb:latest .
+  - docker run -d -p 27017:27017 --name mongodb zokeber/mongodb
+  - docker ps -a
