@@ -1,0 +1,11 @@
+before_script:
+  - docker images
+
+build_image:
+  script:
+    - docker build -t zokeber/mongodb:latest .
+    - docker create -it -p 0.0.0.0:27017:27017 --name mongodb zokeber/mongodb
+    - docker start mongodb
+    - docker stop mongodb
+    - docker rm mongodb
+    - docker rmi zokeber/mongodb:latest
