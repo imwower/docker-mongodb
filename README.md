@@ -2,7 +2,7 @@
 
 This repository contains a Dockerfile to build a Docker Image for MongoDB in CentOS 7.
 
-[![Build Status](https://travis-ci.org/zokeber/docker-mongodb.svg?branch=master)](https://travis-ci.org/zokeber/docker-mongodb)
+[![Build Status](https://travis-ci.org/zokeber/docker-mongodb.svg?branch=master)](https://travis-ci.org/zokeber/docker-mongodb) [![](https://images.microbadger.com/badges/image/zokeber/mongodb.svg)](http://microbadger.com/images/zokeber/mongodb "Get your own image badge on microbadger.com")
 
 ## Base Docker Image
 
